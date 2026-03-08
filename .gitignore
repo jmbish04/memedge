@@ -5,3 +5,17 @@ dist/
 .DS_Store
 coverage/
 
+# Wrangler
+.wrangler/
+.dev.vars
+
+# Drizzle
+drizzle/migrations/*.sql
+!drizzle/migrations/.gitkeep
+
+# Astro
+.astro/
+
+# Build outputs
+*.tsbuildinfo
+

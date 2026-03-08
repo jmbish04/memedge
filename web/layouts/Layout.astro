@@ -1,0 +1,43 @@
+---
+import '../styles/globals.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Advanced memory management system for LLM agents' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="min-h-screen bg-background font-sans antialiased">
+      <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div class="container flex h-14 max-w-screen-2xl items-center">
+          <div class="mr-4 flex">
+            <a class="mr-6 flex items-center space-x-2" href="/">
+              <span class="font-bold">Memedge 🧠</span>
+            </a>
+            <nav class="flex items-center gap-6 text-sm">
+              <a href="/" class="transition-colors hover:text-foreground/80 text-foreground/60">Home</a>
+              <a href="/memories" class="transition-colors hover:text-foreground/80 text-foreground/60">Memories</a>
+              <a href="/api" class="transition-colors hover:text-foreground/80 text-foreground/60">API</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="container py-6">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
