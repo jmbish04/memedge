@@ -4,6 +4,17 @@
 
 Memedge is a sophisticated memory system designed for building stateful LLM agents on Cloudflare Workers. Inspired by [Letta (formerly MemGPT)](https://github.com/letta-ai/letta), it provides structured memory blocks, semantic search, recursive summarization, and privacy-aware memory management.
 
+## 🚀 Now with Cloudflare Workers + Astro + Drizzle!
+
+This project has been retrofitted to run on Cloudflare Workers with:
+- **Astro Islands** - SSR with selective hydration
+- **Drizzle ORM** - Type-safe D1 database access
+- **Shadcn UI** - Beautiful dark-themed components
+- **Full TypeScript** - Worker configuration types via `wrangler types`
+
+**[📖 See Cloudflare Setup Guide →](./CLOUDFLARE_SETUP.md)**
+
+
 ## ✨ Features
 
 - **🎯 Structured Memory Blocks**: Organize information into core blocks (human, persona, context) and custom blocks
