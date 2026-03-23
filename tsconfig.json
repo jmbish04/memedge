@@ -15,11 +15,18 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["@cloudflare/workers-types"],
-    "paths": {}
+    "types": ["./worker-configuration.d.ts", "@cloudflare/workers-types"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["web/*"]
+    }
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "web/**/*",
+    "drizzle/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -27,4 +34,5 @@
     "tests"
   ]
 }
+
 

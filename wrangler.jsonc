@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "memedge",
+  "main": "dist/_worker.js",
+  "compatibility_date": "2026-03-08",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Static assets served via Astro
+  "assets": {
+    "directory": "dist",
+    "binding": "ASSETS"
+  },
+
+  // D1 Database bindings
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "memedge-db",
+      "database_id": "placeholder-will-be-set-after-creation",
+      "migrations_dir": "drizzle/migrations"
+    }
+  ],
+
+  // AI binding for embeddings
+  "ai": {
+    "binding": "AI"
+  },
+
+  // Observability
+  "observability": {
+    "enabled": true
+  },
+
+  // Environment variables (use wrangler secret for sensitive values)
+  "vars": {
+    "ENVIRONMENT": "production"
+  }
+}

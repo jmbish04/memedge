@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { MemoryDashboard } from '../components/MemoryDashboard';
+---
+
+<Layout title="Memedge - Memory Management for LLM Agents">
+  <div class="flex flex-col items-center justify-center space-y-8 py-12">
+    <div class="text-center space-y-4">
+      <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+        Memedge 🧠
+      </h1>
+      <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+        Advanced memory management system for LLM agents with Letta-inspired features
+      </p>
+    </div>
+
+    <MemoryDashboard client:load />
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-5xl">
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+        <h3 class="text-lg font-semibold">🎯 Structured Blocks</h3>
+        <p class="text-sm text-muted-foreground mt-2">
+          Organize information into core and archival memory blocks
+        </p>
+      </div>
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+        <h3 class="text-lg font-semibold">🔍 Semantic Search</h3>
+        <p class="text-sm text-muted-foreground mt-2">
+          Built-in semantic search using Cloudflare AI embeddings
+        </p>
+      </div>
+      <div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+        <h3 class="text-lg font-semibold">⚡ Edge-Native</h3>
+        <p class="text-sm text-muted-foreground mt-2">
+          Optimized for Cloudflare Workers with D1 database
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

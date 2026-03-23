@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import type { APIRoute } from 'astro';
+
+// This page demonstrates how to integrate with D1 and Drizzle
+const runtime = Astro.locals.runtime;
+---
+
+<Layout title="Memories - Memedge">
+  <div class="space-y-6">
+    <div>
+      <h1 class="text-3xl font-bold tracking-tight">Memory Blocks</h1>
+      <p class="text-muted-foreground">View and manage your agent's memory</p>
+    </div>
+
+    <div class="rounded-lg border bg-card p-6">
+      <p class="text-muted-foreground">
+        Memory blocks will be loaded from D1 database via Drizzle ORM.
+      </p>
+      <p class="text-sm text-muted-foreground mt-4">
+        Connect to the API endpoints to manage memories programmatically.
+      </p>
+    </div>
+  </div>
+</Layout>
